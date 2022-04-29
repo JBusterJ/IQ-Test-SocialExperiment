@@ -21,7 +21,7 @@ document.getElementById("age").addEventListener("change", function () {
     console.log("Entered date:", document.getElementById("age").value, moment(document.getElementById("age").value).isAfter(moment("2008-1-1")))
     var age = document.getElementById("age").value;
 
-    if (moment(age).isAfter(moment("2008-1-1")) && moment(age).isBefore(moment("2013-1-1"))) {
+    if (moment(age).isAfter(moment("2007-1-1")) && moment(age).isBefore(moment("2015-1-1"))) {
         console.log("Valid DOB!");
         parent = document.getElementById("confirmation-begin");
         parent.innerHTML = "";
