@@ -17,30 +17,30 @@ totalTestTime.stop();
 var timer = new Timer();
 timer.stop();
 
-document.getElementById("age").addEventListener("change", function () {
-    console.log("Entered date:", document.getElementById("age").value, moment(document.getElementById("age").value).isAfter(moment("2008-1-1")))
-    var age = document.getElementById("age").value;
+// document.getElementById("age").addEventListener("change", function () {
+//     console.log("Entered date:", document.getElementById("age").value, moment(document.getElementById("age").value).isAfter(moment("2008-1-1")))
+//     var age = document.getElementById("age").value;
 
-    if (moment(age).isAfter(moment("2007-1-1")) && moment(age).isBefore(moment("2015-1-1"))) {
-        console.log("Valid DOB!");
-        parent = document.getElementById("confirmation-begin");
-        parent.innerHTML = "";
-        beginButton = document.createElement("button");
-        beginButton.innerHTML = "Begin test with an age of " + moment().to(moment(age), true);
-        beginButton.addEventListener("click", function () {
-            var cont = confirm("Are you sure you would like to continue with this operation?\nAfter confirmation, your browser screen will go into a fullscreen window, and exiting this window will terminate the test.");
-            if (cont) {
-                document.getElementById("descriptions").innerHTML = "";
-                anticheat();
-                document.getElementById("test").style.display = "block";
-                totalTestTime.start();
-                nextQuestion();
-            }
-            return 0;
-        });
-        parent.appendChild(beginButton);
-    }
-});
+//     if (moment(age).isAfter(moment("2007-1-1")) && moment(age).isBefore(moment("2015-1-1"))) {
+//         console.log("Valid DOB!");
+//         parent = document.getElementById("confirmation-begin");
+//         parent.innerHTML = "";
+//         beginButton = document.createElement("button");
+//         beginButton.innerHTML = "Begin test with an age of " + moment().to(moment(age), true);
+//         beginButton.addEventListener("click", function () {
+//             var cont = confirm("Are you sure you would like to continue with this operation?\nAfter confirmation, your browser screen will go into a fullscreen window, and exiting this window will terminate the test.");
+//             if (cont) {
+//                 document.getElementById("descriptions").innerHTML = "";
+//                 anticheat();
+//                 document.getElementById("test").style.display = "block";
+//                 totalTestTime.start();
+//                 nextQuestion();
+//             }
+//             return 0;
+//         });
+//         parent.appendChild(beginButton);
+//     }
+// });
 katex.render(String.raw`e = \pm0.00032858`, document.getElementById("moe"), {
     throwOnError: false
 });
